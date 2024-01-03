@@ -1,17 +1,17 @@
 # Aplicación Spring Boot con arquitectura de microservicios
 Este proyecto esta formado por los siguientes servicios:
 
----------Servicio Productos---------
+# ---------Servicio Productos---------
 Es el encargado de las operaciones CRUD de los productos, puedes acceder a su
 documentación en: localhost:8080/swagger-ui.html
 
----------Servicio Carrito---------
+# ---------Servicio Carrito---------
 Este servicio se encarga de agregar o quitar productos de un carrito, se comunica
 con el servicio de productos mediante FEIGN, al agregar o quitar un producto se 
 almacenara el monto total.
 Puedes acceder a su documentación en: localhost:8085/swagger-ui.html
 
----------Servicio Ventas---------
+# ---------Servicio Ventas---------
 Se encarga de registrar las ventas, recibe un carrito desde el servicio carrito mediante FEIGN.
 Registrara su lista de productos, el monto total y la fecha de venta. Al realizar una venta, se
 descontara la cantidad(stock) de ese producto en el servicio productos y ademas se eliminara el
@@ -25,7 +25,7 @@ Puedes acceder a su documentación en: localhost:8090/swagger-ui.html
 * Servidor de configuración central.
 * Gateway
 
-#Instalación
+# Instalación
 Para probar este proyecto, crea las siguientes bases de datos mysql: "productos_bd", "carrito_bd" y "ventas_bd". Luego 
 clona este repositorio y ejecuta todos los microservicios. Una vez realizado lo anterior ya esta todo listo para hacer
 pruebas mediante POSTMAN o una herramienta similar
