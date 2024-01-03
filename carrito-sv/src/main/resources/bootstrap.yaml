@@ -1,0 +1,13 @@
+springdoc:
+  swagger-ui:
+    enabled: true
+    path: swagger-ui.html
+  api-docs:
+    enabled: true
+spring:
+  application:
+    name: carrito-sv
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8095

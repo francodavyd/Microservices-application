@@ -1,19 +1,10 @@
-spring:
-  application:
-    name: eureka-sv
-  cloud:
-    discovery:
-      client:
-        register-with-eureka: false
-        fetch-registry: false
-    inetutils:
-      preferred-networks:
-        - 127.0.0.1
-
 server:
-  port: 8761
+  port: ${PORT:${SERVER_PORT:0}}
 
 eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
   instance:
     lease-renewal-interval-in-seconds: 0
 
