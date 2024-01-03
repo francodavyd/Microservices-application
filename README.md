@@ -31,7 +31,7 @@ localhost:8090/swagger-ui.html
 Para probar este proyecto, crea las siguientes bases de datos mysql: "productos_bd", "carrito_bd" y "ventas_bd". Luego 
 clona este repositorio y ejecuta todos los microservicios. Una vez realizado lo anterior ya esta todo listo para hacer
 pruebas mediante POSTMAN o una herramienta similar
-- En este proyecto se incluye El patron gateway, para utilizarlo coloca:
-   localhost:443/nombre-servicio/endpoint-servicio
+En este proyecto se incluye El patron gateway, para utilizarlo coloca:
+localhost:443/nombre-servicio/endpoint-servicio
 
 
