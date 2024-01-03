@@ -3,8 +3,8 @@ Este proyecto esta formado por los siguientes servicios:
 
 # Servicio Productos
 Es el encargado de las operaciones CRUD de los productos.
---------------------------------------------------------------------------------------------------------
-POST localhost:8080/productos-sv/productos/crear
+
+* POST localhost:8080/productos-sv/productos/crear
 
 {
 "idProducto" : 1,
@@ -14,13 +14,13 @@ POST localhost:8080/productos-sv/productos/crear
 "cantidadDisponible" : 10
 }
 
-GET localhost:8080/productos-sv/productos/obtenerLista
+* GET localhost:8080/productos-sv/productos/obtenerLista
 
-GET localhost:8080/productos-sv/productos/obtenerProducto/{idProducto}
+* GET localhost:8080/productos-sv/productos/obtenerProducto/{idProducto}
 
-DELETE localhost:8080/productos-sv/productos/eliminarProducto/{idProducto}
+* DELETE localhost:8080/productos-sv/productos/eliminarProducto/{idProducto}
 
-PUT localhost:8080/productos-sv/productos/editarProducto/{idProducto}
+* PUT localhost:8080/productos-sv/productos/editarProducto/{idProducto}
 
 --------------------------------------------------------------------------------------------------------
 
@@ -29,22 +29,20 @@ Este servicio se encarga de agregar o quitar productos de un carrito, se comunic
 con el servicio de productos mediante FEIGN, al agregar o quitar un producto se 
 almacenara el monto total.
 
---------------------------------------------------------------------------------------------------------
-
-POST localhost:8080/carrito-sv/carrito/agregarProducto
+* POST localhost:8080/carrito-sv/carrito/agregarProducto
 
 {
 "idCarrito" : 1,
 "idProducto" : 1
 }
 
-GET localhost:8080/carrito-sv/carrito/obtenerLista
+* GET localhost:8080/carrito-sv/carrito/obtenerLista
 
-GET localhost:8080/carrito-sv/carrito/obtenerCarrito/{idCarrito}
+* GET localhost:8080/carrito-sv/carrito/obtenerCarrito/{idCarrito}
 
-DELETE localhost:8080/carrito-sv/carrito/eliminarCarrito/{idCarrito}
+* DELETE localhost:8080/carrito-sv/carrito/eliminarCarrito/{idCarrito}
 
-DELETE localhost:8080/carrito-sv/carrito/quitarProducto/{opcion}
+* DELETE localhost:8080/carrito-sv/carrito/quitarProducto/{opcion}
 
 ****El parametro opcion es un String, debe ser "one" o "all". Si se selecciona one
 solo se eliminara el primer producto encontrado con esa id, y si se selecciona all
@@ -63,15 +61,13 @@ Registrara su lista de productos, el monto total y la fecha de venta. Al realiza
 descontara la cantidad(stock) de ese producto en el servicio productos y ademas se eliminara el
 carrito de su base de datos, quedando su registro solamente en la venta.
 
---------------------------------------------------------------------------------------------------------
+* POST localhost:8080/ventas-sv/ventas/crear?idVenta=1&idCarrito=1
 
-POST localhost:8080/ventas-sv/ventas/crear?idVenta=1&idCarrito=1
+* GET localhost:8080/ventas-sv/ventas/obtenerLista
 
-GET localhost:8080/ventas-sv/ventas/obtenerLista
+* GET localhost:8080/ventas-sv/ventas/obtenerVenta/{idVenta}
 
-GET localhost:8080/ventas-sv/ventas/obtenerVenta/{idVenta}
-
-DELETE localhost:8080/ventas-sv/ventas/eliminarVenta/{idVenta}
+* DELETE localhost:8080/ventas-sv/ventas/eliminarVenta/{idVenta}
 
 --------------------------------------------------------------------------------------------------------
 
