@@ -44,6 +44,7 @@ public class VentaServiceImpl implements IVentaService{
     public Venta  fallbackCrearVenta(){
         return new Venta(null, null,null);
     }
+
     @CircuitBreaker(name = "productos-sv" , fallbackMethod = "fallbackActualizarStock")
     @Retry(name = "productos-sv")
     private void actualizarStock(Carrito carrito){
