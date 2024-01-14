@@ -25,8 +25,7 @@ spring:
         - id: carrito-sv
           uri: lb://carrito-sv
           predicates:
-            - Path=/carrito/**
-
+            - Path=/carrito/** 
         - id: ventas-sv
           uri: lb://ventas-sv
           predicates:
