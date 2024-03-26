@@ -81,7 +81,9 @@ carrito de su base de datos, quedando su registro solamente en la venta.
 # Instalación
 Para probar este proyecto, crea las siguientes bases de datos mysql: "productos_bd", "carrito_bd" y "ventas_bd". Luego 
 clona este repositorio y ejecuta todos los microservicios. Una vez realizado lo anterior ya esta todo listo para hacer
-pruebas mediante POSTMAN o una herramienta similar
+pruebas mediante POSTMAN o una herramienta similar.
+* El config server, va con un repositorio privado, pero en este caso uso este mismo repositorio por demostración. Para configurar las variables
+  de entorno username y password en el application.yml del config server, debes configurarlas en tu IDE.
 
 
 
